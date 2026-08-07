@@ -1,0 +1,27 @@
+package edu.umg.programacion1.examen2.serieb;
+
+/**
+ * Serie B - Problema 3 (2.5 puntos)
+ * <p>
+ * Practica: herencia y sobreescritura ({@code @Override}) con reglas distintas por subtipo.
+ * <p>
+ * Objetivo:
+ * <ul>
+ *   <li>Clase {@code Cuenta} con saldo (double). Métodos {@code depositar(double m)} y {@code retirar(double m)} con {@code m &gt; 0};
+ *       {@code retirar} no debe dejar saldo negativo (si no hay fondos, no cambie el saldo y puede retornar {@code false}, o use el criterio que documente en comentarios).</li>
+ *   <li>Clase {@code CuentaAhorro} que extienda {@code Cuenta} y agregue una tasa de interés anual (double, por ejemplo 0.03 para 3%).</li>
+ *   <li>Sobreescriba {@code depositar} en {@code CuentaAhorro} para que, además del depósito normal, acredite intereses simples sobre el monto depositado: {@code m * tasa}
+ *       (solo como ejemplo de regla adicional; ajuste si prefiere otra fórmula, pero documente).</li>
+ *   <li>Proporcione {@code double getSaldo()} coherente en toda la jerarquía.</li>
+ * </ul>
+ * <p>
+ * En {@link #main(String[])} cree una cuenta simple y una cuenta de ahorro, realice depósitos y muestre saldos finales.
+ */
+public class Problema03CuentaMain {
+
+    public static void main(String[] args) {
+        // TODO estudiante: demostración según el enunciado
+
+
+    }
+}
