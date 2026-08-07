@@ -21,14 +21,15 @@ public class Pregunta01Encapsulamiento {
 
     public void setEdad(int edad) {
         // TODO estudiante: validar edad >= 0
-
-
+        if (edad >= 0) {
+            this.edad = edad;
+        }
     }
 
     /*
      * CONCEPTO (escriba aquí su explicación breve, 2-4 líneas):
-     *
-     *
-     *
+     * El encapsulamiento evita la corrupción de datos y el acceso descontrolado desde el exterior. 
+     * Al dejar la edad como public, cualquier clase podría asignarle un valor negativo o ilógico. 
+     * Al usar private y un setter, se centraliza el control y se garantiza la validez del estado interno del objeto.
      */
 }
