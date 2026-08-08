@@ -17,11 +17,56 @@ package edu.umg.programacion1.examen2.serieb;
  * <p>
  * Nota: defina las clases que hagan falta; respete el uso de {@code super} donde corresponda.
  */
+class Empleado {
+    protected String nombre;
+    protected double salarioBase;
+
+    public Empleado(String nombre, double salarioBase) {
+        this.nombre = nombre;
+        if (salarioBase >= 0) {
+            this.salarioBase = salarioBase;
+        } else {
+            this.salarioBase = 0.0;
+        }
+    }
+
+    public String resumen() {
+        return "Empleado: " + this.nombre + " | Salario Base: Q" + this.salarioBase;
+    }
+}
+
+class Vendedor extends Empleado {
+    private double comision;
+
+    public Vendedor(String nombre, double salarioBase, double comision) {
+        super(nombre, salarioBase);
+        if (comision >= 0) {
+            this.comision = comision;
+        } else {
+            this.comision = 0.0;
+        }
+    }
+
+    public double salarioTotal() {
+        return this.salarioBase + this.comision;
+    }
+
+    @Override
+    public String resumen() {
+        return super.resumen() + " | Comisión: Q" + this.comision + " | Total: Q" + this.salarioTotal();
+    }
+}
+
 public class Problema02HerenciaMain {
 
     public static void main(String[] args) {
-        // TODO estudiante: demostración según el enunciado
+        // 1. Creación de un empleado regular y un vendedor
+        Empleado emp = new Empleado("Juan Pérez", 3500.0);
+        Vendedor vend = new Vendedor("María López", 4000.0, 1500.0);
 
-
+        // 2. Impresión del resumen de cada uno
+        System.out.println("=== RESUMEN DE PERSONAL ===");
+        System.out.println(emp.resumen());
+        System.out.println(vend.resumen());
     }
 }
